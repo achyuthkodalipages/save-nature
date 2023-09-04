@@ -1,0 +1,294 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$save-nature-primary: mat.define-palette(mat.$indigo-palette);
+$save-nature-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$save-nature-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$save-nature-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $save-nature-primary,
+      accent: $save-nature-accent,
+      warn: $save-nature-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($save-nature-theme);
+
+/* You can add global styles to this file, and also import other style files */
+*,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+body {
+  background-color: #ededed !important;
+}
+
+span[class^="material-icons-"] {
+  font-size: 18px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.icon-button {
+  border: none;
+  padding: 6px;
+  background-color: transparent;
+  border-radius: 3px;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.button {
+  background-color: #8229af;
+  color: white;
+  max-height: 36px;
+  min-height: 36px;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+
+  &.cancel {
+    background-color: #e8e8e8;
+    color: #255c68;
+    border: 1px solid;
+
+    &:hover {
+      background-color: #aeafaf;
+    }
+  }
+
+  &:hover {
+    background-color: #5c0089;
+  }
+}
+
+.input {
+  height: 50px;
+  border-radius: 5px;
+  //   border: 1px solid $border-color;
+  padding: 14px;
+  &:focus {
+    outline-color: #8229af;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  &:not(&:last-child) {
+    margin-right: 10px;
+  }
+  span {
+    margin-bottom: 15px;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
+
+.c-t {
+  color: #8229af;
+}
+
+.bg-t {
+  background-color: #8229af;
+}
+
+.divider {
+  border-right: 1px solid #ededed;
+  height: 70%;
+}
+
+.ng-select {
+  margin-top: 0 !important;
+  .ng-select-container {
+    &:hover {
+      background-color: #8229af;
+      .ng-placeholder {
+        color: white !important;
+      }
+    }
+    border: 1px solid #8229af;
+    box-shadow: 0px 4px 8px rgb(56 56 48 / 10%);
+    .ng-placeholder {
+      color: #0a233f !important;
+    }
+  }
+}
+
+.green-snackbar {
+  background: green;
+  color: white;
+}
+.green-snackbar button {
+  background-color: green;
+  color: white;
+  border: none;
+}
+.red-snackbar {
+  background: #f44336;
+  color: white;
+}
+.red-snackbar button {
+  background-color: #f44336;
+  color: white !important;
+  // border: none;
+}
+.edit-color {
+  color: #8229af;
+}
+.ng-select.ng-select-focussed:not(.ng-select-opened) > .ng-select-container {
+  border-color: #8229af !important;
+  box-shadow: none !important;
+}
+.search-container {
+  position: relative;
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    font-size: 24px;
+  }
+  input {
+    width: 300px;
+    padding-left: 40px;
+  }
+}
+
+.k-grid th,
+.k-grid td {
+  padding: 14px 12px;
+}
+
+.k-grid {
+  .k-column-title {
+    font-size: 17px;
+    font-weight: bolder;
+  }
+}
+
+.grid {
+  a.link {
+    color: rgb(62, 62, 235) !important;
+  }
+}
+
+.mat-form-field-wrapper {
+  padding: 0px;
+  margin: 0px !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.error {
+  color: red;
+  padding-top: 10px;
+}
+
+.topic-style {
+  color: #8229af;
+  font-size: 1.75rem;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-form-field-flex {
+  height: 52px !important;
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  text-transform: capitalize;
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+  text-transform: capitalize;
+}
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+  text-transform: capitalize;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #faf3ff !important;
+}
+.fc-daygrid-block-event .fc-event-time,
+.fc-daygrid-block-event .fc-event-title {
+  padding: 1px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #fff !important;
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: mediumpurple !important;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
