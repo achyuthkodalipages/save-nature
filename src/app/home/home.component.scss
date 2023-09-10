@@ -1,5 +1,7 @@
 // Start here
-
+.bg-style{
+	background-color: #fff;
+}
 $title-color: #222;
 $font-color: #777;
 $light-gray: #eee;
@@ -24,7 +26,7 @@ body {
 	width: 60em;
 	margin: 2rem auto;
 	// TODO: apply clearfix
-	
+
 
 	// If want a flexbox grid.
 	&.product-grid--flexbox {
@@ -32,28 +34,30 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 		}
-		
+
 		.product-grid__title {
 			height: auto;
-			
-			&:after { display: none; }
+
+			&:after {
+				display: none;
+			}
 		}
 	}
-	
+
 
 	&__wrapper {
 		margin-left: -1rem;
 		margin-right: -1rem;
 		//background: #000;
 	}
-	
+
 	&__product-wrapper {
 		padding: 1rem;
 		float: left;
 		width: 33.33333%;
 	}
-	
-	
+
+
 	&__product {
 		padding: 1rem;
 		// width: 33.33333%;
@@ -63,18 +67,18 @@ body {
 		background: #fff;
 		//box-shadow: $product-box-shadow;
 		border-radius: 4px;
-		
+
 		&:hover {
 			box-shadow: $product-box-shadow;
 			z-index: 50;
-			
+
 			.product-grid__extend {
 				display: block;
 			}
 		}
 	}
-	
-			
+
+
 	// product image wrapper
 	&__img-wrapper {
 		width: 100%;
@@ -83,16 +87,16 @@ body {
 		padding-bottom: 1rem;
 		height: 150px;
 	}
-	
-	
-		// product image
-		&__img {
-			max-width: 100%;
-			height: auto;
-			max-height: 100%;
-		}
-	
-	
+
+
+	// product image
+	&__img {
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
+
 	//	product title
 	&__title {
 		margin-top: .875rem;
@@ -102,7 +106,7 @@ body {
 		height: 3em;
 		overflow: hidden;
 		position: relative;
-		
+
 		&:after {
 			content: "";
 			display: block;
@@ -115,19 +119,19 @@ body {
 			//background: red;
 		}
 	}
-	
+
 	&__price {
 		color: $primary;
 		font-weight: bold;
 		letter-spacing: .4px;
 	}
-	
-	
+
+
 	// extend wrapper
 	&__extend-wrapper {
 		position: relative;
 	}
-	
+
 	// extended elements
 	// show when hover .product-grid__product
 	&__extend {
@@ -138,7 +142,7 @@ body {
 		box-shadow: $product-box-shadow;
 		background: #fff;
 		border-radius: 0 0 4px 4px;
-		
+
 		&:before {
 			content: "";
 			height: .875rem;
@@ -149,8 +153,8 @@ body {
 			background: #fff;
 		}
 	}
-	
-	
+
+
 	// product description	
 	&__description {
 		font-size: .875em;
@@ -158,8 +162,8 @@ body {
 		margin-top: .4375rem;
 		margin-bottom: 0;
 	}
-	
-	
+
+
 	// buttons
 	&__btn {
 		display: inline-block;
@@ -171,39 +175,78 @@ body {
 		margin-right: .625rem;
 		cursor: pointer;
 		border-radius: 4px;
-		
-		i.fa { margin-right: .3125rem;}
+
+		i.fa {
+			margin-right: .3125rem;
+		}
 	}
-	
-	
+
+
 	&__add-to-cart {
 		color: #fff;
 		background: $primary;
-		
-		&:hover { background: lighten($primary, 10%); }
+
+		&:hover {
+			background: lighten($primary, 10%);
+		}
 	}
-	
+
 	&__view {
 		color: $font-color;
 		background: $light-gray;
-		
-		&:hover { background: lighten($light-gray, 10%); }
+
+		&:hover {
+			background: lighten($light-gray, 10%);
+		}
 	}
 }
+
 .carousel-item {
-	height: 200px;
-	width: 400px;
-  }
-  
-  .orange {
+	height: 500px;
+	width: 100%;
+}
+
+.orange {
 	background: rgb(230, 191, 119);
-  }
-  
-  .blue {
+}
+
+.blue {
 	background: rgb(127, 127, 245);
-  }
-  
-  .red {
+}
+
+.red {
 	background: rgb(236, 179, 179);
-  }
-  
+}
+
+.sliding-sttyle {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.text-card-style {
+	width: 60%;
+	margin: 0 auto;
+}
+p{
+	color: gray;
+    line-height: 40px;
+    font-size: 19px;
+}
+.style-button{
+	background: #ff6b6b;
+    font-size: 19px;
+    padding: 20px;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+.carousel-text-style{
+	color: #fff;
+	h1{
+		font-size: 39px;
+	}
+	// h3{
+	// 	font-size: 25px;
+	// }
+}
